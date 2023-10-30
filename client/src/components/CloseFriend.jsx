@@ -8,8 +8,9 @@ const CloseFriend = ({ user }) => {
         <img
           className="sidebarFriendImg"
           src={
-            `https://social-media-back-end-936o.onrender.com/imagesProfile/${user.profilePicture}` ||
-            noavatar
+            !user.profilePicture === ""
+              ? `https://social-media-back-end-936o.onrender.com/imagesProfile/${user.profilePicture}`
+              : noavatar
           }
           alt=""
         />
